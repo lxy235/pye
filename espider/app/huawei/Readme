@@ -1,0 +1,22 @@
+# 命令使用
+
+python Huawei.py -t agencys -o agencyslist                                   #代理商列表
+python Huawei.py -t agencys -o datamanager                                   #数据报表
+
+python Huawei.py -t agencyuser -o getaccounts                                #客户列表
+python Huawei.py -t agencyuser -o datamanager -s <开始时间>　-e <结束时间>      #数据管理列表
+
+python Huawei.py -t agencyuser -o keywordlist -s <开始时间>　-e <结束时间>      #关键词列表, 前置任务getaccounts
+python Huawei.py -t agencyuser -o keyworddenylist                            #否定关键词列表, 前置任务getaccounts
+python Huawei.py -t agencyuser -o keywordreport -s <开始时间>　-e <结束时间>    #关键词报表, 前置任务getaccounts
+
+python Huawei.py -t agencyuser -o tasklist                                   #推广任务列表, 前置任务getaccounts
+python Huawei.py -t agencyuser -o taskreport -s <开始时间>　-e <结束时间>       #推广任务报表, 前置任务tasklist
+
+时间格式: 2018-01-01
+
+#修改日期
+ALTER TABLE `kuaishou_advers` ADD `ymd2` VARCHAR(200) NOT NULL AFTER `ymd`;
+update kuaishou_advers set ymd2 = date_format(ymd, "%Y%m%d");
+ALTER TABLE `kuaishou_advers` DROP `ymd`;
+ALTER TABLE `kuaishou_advers` CHANGE `ymd2` `ymd` VARCHAR(200) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL;
