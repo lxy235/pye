@@ -5,8 +5,8 @@
 # @Time: 2013-10-17
 # @Info: 公共方法库
 import time
-from Const import *
-from Config import Config
+from eserver.common.const import *
+from eserver.library.config import Config
 
 _config = Config()
 _default_lang = _config.get("default_lang")

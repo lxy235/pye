@@ -5,10 +5,10 @@
 # @Time: 2013-10-17
 # @Info: Mysql Driver
 
-from Db import Db
+from eserver.library.db import Db
 import pymysql
-import Log
-from Function import *
+import eserver.library.log as Log
+from eserver.common.function import *
 
 class Mysql(Db):
     

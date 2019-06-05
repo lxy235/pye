@@ -5,7 +5,8 @@
 # @Time: 2013-10-17
 # @Info: queue
 
-import Config, Util
+from eserver.library.config import Config
+import eserver.library.log as Log
 from collections import deque
 
 class Queue():
@@ -33,7 +34,7 @@ class Queue():
             del p['queue_type']
             self.__sqs[queue_type].append(p)
         except:
-            Util.error()
+            Log.error()
         return [8001,{"msg":"success"+str(i)}]
         
     #出队列
@@ -46,7 +47,7 @@ class Queue():
             if temp == -1:
                 return [4002,{"msg":"queue is empty"}]
         except:
-            Util.error()
+            Log.error()
         return [8002,temp]
     
     #队列长度
@@ -57,7 +58,7 @@ class Queue():
         try:
             temp = len(self.__sqs[queue_type])
         except:
-            Util.error()
+            Log.error()
         return [8003,temp]
         
 if __name__ == "__main__":

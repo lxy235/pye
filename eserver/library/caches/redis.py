@@ -5,9 +5,11 @@
 # @Time: 2013-10-17
 # @Info: Redis Library.
 
-import redis, Log, sys, json
-from Config import Config
-from Cache import Cache
+import redis, sys, json
+import eserver.library.log as Log
+from eserver.library.config import Config
+from eserver.library.cache import Cache
+from eserver.common.function import *
 
 class Redis(Cache):
     config = None

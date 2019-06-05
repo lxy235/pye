@@ -5,9 +5,9 @@
 # @Time: 2013-10-17
 # @Info: queue
 
-import Log
+import eserver.library.log as Log
 from collections import deque
-from Config import Config
+from eserver.library.config import Config
 
 class Queue():
     
