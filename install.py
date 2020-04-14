@@ -2,7 +2,7 @@
 # coding=utf-8
 #
 # @Author: LiXiaoYu
-# @Time: 2019-04-25
+# @Time: 2020-04-15
 # @Info: Install Server.
 # @exam: sudo python3 install.py
 
@@ -13,7 +13,7 @@ sp = get_python_lib()
 print('::This site-package path is: %s' % sp)
 time.sleep(1)
 
-libfile = sp + '/eserver_library.pth'
+libfile = sp + '/elibrary.pth'
 
 if os.path.isfile(libfile):
 	print('The python library install is successful!')
@@ -30,7 +30,7 @@ io = open(libfile, 'w+')
 io.write(path+"\n")
 io.close()
 
-print('::Write the <library.pth> in %s dir, File content is python library path' % sp)
+print('::Write the <elibrary.pth> in %s dir, File content is python library path' % sp)
 time.sleep(1)
 
 if os.path.isfile(libfile) == False:
@@ -38,8 +38,8 @@ if os.path.isfile(libfile) == False:
 	sys.exit()
 
 print('...........................................')
-print('.     [Welcome Use The Python Server]     .')
+print('.     [Welcome Use The e Server]     .')
 print('.                                         .')
-print('. System Last Modify Time Is : 2019-04-25 .')
+print('. System Last Modify Time Is : 2020-04-15 .')
 print('...........................................')
 

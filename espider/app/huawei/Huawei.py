@@ -433,12 +433,12 @@ if __name__ == "__main__":
         opts, args = getopt.getopt(argv, "ht:o:s:e:", ["agencytype=", "operation=", "startdate=", "enddate="])
     except getopt.GetoptError:
         print
-        'python Huawei.py -t <agencytype> -o <operation> -s <startdate> -e <enddate>'
+        'python Ppb.py -t <agencytype> -o <operation> -s <startdate> -e <enddate>'
         sys.exit(2)
     for opt, arg in opts:
         if opt == '-h':
             print
-            'python Huawei.py -t <agencytype> -o <operation> -s <startdate> -e <enddate>'
+            'python Ppb.py -t <agencytype> -o <operation> -s <startdate> -e <enddate>'
             sys.exit()
         elif opt in ("-t", "--agencytype"):
             agencytype = arg
