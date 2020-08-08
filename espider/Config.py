@@ -4,36 +4,14 @@
 
 from espider.Env import *
 
-# DB
-if ENV == 'remote':
-    DB = {
-        "host": "192.144.146.211",
-        "port": 3306,
-        "user": "remoteuser",
-        "passwd": "DvcMfeLFCsakGtyn",
-        "db": "ladonnew_db",
-        "charset": "utf8mb4"
-    }
-
-# DB
-if ENV == 'testing':
-    DB = {
-        "host": "123.206.73.104",
-        "port": 3306,
-        "user": "txtest",
-        "passwd": "aJxu1OGpYxaBsNKIXuYQ",
-        "db": "ladon",
-        "charset": "utf8mb4"
-    }
-
 # 开发环境
 if ENV == 'devel':
     DB = {
-        "host": "localhost",
+        "host": "10.200.21.239",
         "port": 3306,
         "user": "root",
-        "passwd": "123456",
-        "db": "ladonnew_db",
+        "passwd": "qwe123",
+        "db": "pplive_ad",
         "charset": "utf8mb4"
     }
 
@@ -49,9 +27,7 @@ if ENV == 'online':
 
 # Public TableMap
 TableMap = {
-    "ACCOUNT_TABLE": "account",
-    "AGENCY_TABLE": "agencys",
-    "AGENCY_COOKIE_TABLE": "agency_cookie"
+    "AD_DPL_DEVICE_TABLE": "ad_dpl_device"
 }
 
 # Status
